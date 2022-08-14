@@ -1,6 +1,6 @@
 require 'watir'
 require 'nokogiri'
-require 'open-uri'
+require 'json'
 
 class Account
     def initialize(name, currency, balance, nature, transactions)
@@ -9,6 +9,12 @@ class Account
       @balance = balance
       @nature = nature
       @transactions = transactions
+    end
+
+
+    def to_json(options = {})
+      # {:name => @name, :balance => @balance, :currency => @currency, :nature => @nature, :transactions => @transactions}.to_json
+      JSON.pretty_generate({:name => @name, :balance => @balance, :currency => @currency, :nature => @nature, :transactions => @transactions})
     end
 end
 
@@ -20,7 +26,16 @@ class Transaction
       @currency = currency
       @account_name = account_name
     end
+
+    def to_json(options = {})
+      # {:date => @date, :description => @description, :amount => @amount, :currency => @currency, :account_name => @account_name}.to_json
+      JSON.pretty_generate({:date => @date, :description => @description, :amount => @amount, :currency => @currency, :account_name => @account_name})
+    end
 end
+
+
+account_array = []
+transaction_array = []
 
 browser = Watir::Browser.new
 
@@ -53,13 +68,40 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
 
     browser.a(:xpath => "/html/body/main/div/section/div[2]/div/div/div/div/div/div/nav/a[1]").click
     page = Nokogiri::HTML(browser.html)
-    puts page.css("li[data-semantic='activity-item']").size
+    
+    account_transactions = []
+    
+    activity_groups = page.css("li[data-semantic='activity-group']")
 
+    activity_groups.each do |activity_group|
+      activity_items = activity_group.css("li[data-semantic='activity-item']")
+      
+      activity_items.each do |activity_item|
+        transaction_description = activity_item.at_css("h2[data-semantic='transaction-title']").children[0].text
+        transaction_date = activity_group.at_css("h3").text
+        currencyAmountPair = activity_item.at_css("span[data-semantic='amount']").text
+        transaction_currency = currencyAmountPair[0]
+        transaction_amount = currencyAmountPair[1..-1]
+        transaction_account_name = account_name
+        
+        transaction = Transaction.new(transaction_date, transaction_description, transaction_amount, transaction_currency, transaction_account_name)
+        account_transactions.push(transaction)
+        transaction_array.push(transaction)
+      end
+    end
 
-    # <li data-semantic="activity-item" data-semantic-activity-score="20220812.0001084668" data-semantic-activity-type="transaction" data-semantic-amount="12900" class="emotion-lfclgy"><article class="panel--badged" data-semantic-expanded="false" data-semantic="activity-item-article"><header class="panel__header" id="panel__header_1130"><a class="emotion-1gr6set" data-semantic="activity-anchor" href="/banking/accounts/cd92d7293c53c834e31c239228301aaa/transactions/cd92d7293c53c834e31c239228301aaa_1084668_2022-08-12T00:00:00+10:00"><div class="panel--badged__header__badge"><img alt="" class="avatar--logo emotion-0" src="https://production.upassets.net/merchant-data/uploads/merchant/logo/840/receipt_scale_1x_mcdonalds.png?v=1616029662"></div><div class="panel__header__label--inline"><h2 class="panel__header__label__primary" data-semantic="transaction-title"><span data-semantic="transaction-primary-title" title="McDonald's" class="emotion-lq7x0b">McDonald's</span><span data-semantic="transaction-secondary-title" title="Mcdonalds the Strand, Sydney / 2079" class="emotion-18s2xmn">Mcdonalds the Strand, Sydney / 2079</span></h2><div class="panel__header__label__secondary panel__header__label__secondary--offset"><span aria-label="Transaction amount: minus $129.00" class="transaction-amount-debit" data-semantic="transaction-amount"><span class="amount debit"><i aria-hidden="true" class="ico-money-debit_12px emotion-jgpxlh"><svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="emotion-7mix5j"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 6a.55.55 0 01.55-.55h6.9a.55.55 0 010 1.1h-6.9A.55.55 0 012 6z" fill="#000"></path></svg></i><span aria-label="$129.00" class="emotion-d3v9zr" data-semantic="amount">$129.00</span></span></span><span class="overflow-ellipsis amount running-balance" data-semantic="running-balance"><span class="emotion-19624tk" tabindex="-1">Balance after transaction:</span><span aria-label="Minus $495.04" class="emotion-d3v9zr"><span class="emotion-19624tk" tabindex="-1">Minus </span><span aria-hidden="true">− </span>$495.04</span></span></div><i aria-hidden="true" class="ico-chevron-detail panel__header__link-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="emotion-1x48oym"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.091 5.48a.75.75 0 011.06-.02l4.914 4.734a1.084 1.084 0 010 1.531l-.006.006-4.903 4.805a.75.75 0 11-1.05-1.072l4.594-4.502L8.111 6.54a.75.75 0 01-.02-1.06z" fill="#000"></path></svg></i></div></a></header></article></li>
-    # grouped-list grouped-list--compact grouped-list--indent
-    # <div class="emotion-12hdm2x" data-semantic="end-of-feed-message"><p>No more activity</p></div>
+    account = Account.new(account_name, account_currency, account_balance, account_nature, account_transactions)
 
-    sleep(100)
+    account_array.push(account)
 
+    # puts JSON.pretty_generate(account)
 end
+
+puts JSON.pretty_generate(account_array)
+# JSON.pretty_generate(transaction_array)
+
+
+
+
+
+
