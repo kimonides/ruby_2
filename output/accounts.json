@@ -1,8 +1,8 @@
 {
   "accounts": [
     {
-      "name": "Max Shields",
-      "balance": "1,916.87",
+      "name": "Joseph Koss",
+      "balance": 1,
       "currency": "$",
       "nature": "Bendigo PiggySaver Account",
       "transactions": [
@@ -11,216 +11,426 @@
           "description": "7-Eleven",
           "amount": "21.61",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 13, 2022",
           "description": "Withdrawal - ATM",
           "amount": "200.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 12, 2022",
           "description": "Kmart",
           "amount": "58.81",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 12, 2022",
           "description": "Demo My Mastercard",
-          "amount": "25.00",
+          "amount": -25,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 10, 2022",
           "description": "Demo My Mastercard",
-          "amount": "230.00",
+          "amount": -230,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 10, 2022",
           "description": "Demo My Mastercard",
-          "amount": "400.00",
+          "amount": -400,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 8, 2022",
           "description": "7-Eleven",
           "amount": "92.05",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 7, 2022",
           "description": "Kmart",
           "amount": "49.27",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 7, 2022",
           "description": "Timothy Jones",
-          "amount": "10.00",
+          "amount": -10,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 6, 2022",
           "description": "ALDI",
           "amount": "98.62",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 6, 2022",
           "description": "Bunnings Warehouse",
           "amount": "85.35",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 6, 2022",
           "description": "Salary",
           "amount": "4,550.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 5, 2022",
           "description": "Oporto",
           "amount": "68.92",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 4, 2022",
           "description": "Optus",
           "amount": "99.07",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 4, 2022",
           "description": "ALDI",
           "amount": "68.54",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 4, 2022",
           "description": "ALDI",
           "amount": "82.53",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 3, 2022",
           "description": "Withdrawal - Non BBL ATM",
           "amount": "150.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 3, 2022",
           "description": "Demo My Mastercard",
-          "amount": "39.00",
+          "amount": -39,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 2, 2022",
           "description": "Optus",
           "amount": "20.73",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 31, 2022",
           "description": "Optus",
           "amount": "72.66",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 31, 2022",
           "description": "Withdrawal - Non BBL ATM",
           "amount": "200.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 31, 2022",
           "description": "Timothy Jones",
-          "amount": "10.00",
+          "amount": -10,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 30, 2022",
           "description": "Emily Champlin",
-          "amount": "10.22",
+          "amount": -10,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 29, 2022",
           "description": "Kmart",
           "amount": "61.22",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 29, 2022",
           "description": "Withdrawal - ATM",
           "amount": "100.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 27, 2022",
           "description": "Withdrawal - Non BBL ATM",
           "amount": "200.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 25, 2022",
           "description": "Demo My Mastercard",
-          "amount": "40.00",
+          "amount": -40,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 24, 2022",
           "description": "Withdrawal - ATM",
           "amount": "150.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 24, 2022",
           "description": "Timothy Jones",
-          "amount": "10.00",
+          "amount": -10,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 23, 2022",
           "description": "Salary",
           "amount": "4,550.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 22, 2022",
+          "description": "7-Eleven",
+          "amount": "21.94",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 21, 2022",
+          "description": "ALDI",
+          "amount": "4.55",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 19, 2022",
+          "description": " (FOXTEL)",
+          "amount": -69,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 17, 2022",
+          "description": "Timothy Jones",
+          "amount": -10,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 16, 2022",
+          "description": "Caltex",
+          "amount": "86.46",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 16, 2022",
+          "description": "Demo My Mastercard",
+          "amount": -26,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 15, 2022",
+          "description": "Withdrawal - Non BBL ATM",
+          "amount": "150.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 14, 2022",
+          "description": " (Sydney Water)",
+          "amount": -72,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 13, 2022",
+          "description": "Withdrawal - Non BBL ATM",
+          "amount": "50.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 13, 2022",
+          "description": " (EnergyAustralia)",
+          "amount": -280,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 11, 2022",
+          "description": "IKEA",
+          "amount": "77.67",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 10, 2022",
+          "description": "Optus",
+          "amount": "45.77",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 10, 2022",
+          "description": "Demo My Mastercard",
+          "amount": -180,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 10, 2022",
+          "description": "Demo My Mastercard",
+          "amount": -200,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 10, 2022",
+          "description": "Timothy Jones",
+          "amount": -10,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 9, 2022",
+          "description": "Telstra",
+          "amount": "48.06",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 9, 2022",
+          "description": "Salary",
+          "amount": "4,550.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 8, 2022",
+          "description": " (Australian Taxation Office)",
+          "amount": -1,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 7, 2022",
+          "description": "Bakers Delight",
+          "amount": "69.29",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 7, 2022",
+          "description": "Demo My Mastercard",
+          "amount": -22,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 6, 2022",
+          "description": "Woolworths",
+          "amount": "91.53",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 4, 2022",
+          "description": " (Telstra Mobile)",
+          "amount": -98,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 3, 2022",
+          "description": "Kmart",
+          "amount": "69.91",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 3, 2022",
+          "description": "Timothy Jones",
+          "amount": -10,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 28, 2022",
+          "description": "Withdrawal - Non BBL ATM",
+          "amount": "100.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 28, 2022",
+          "description": "Demo My Mastercard",
+          "amount": -26,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 26, 2022",
+          "description": "IKEA",
+          "amount": "78.98",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 26, 2022",
+          "description": "Timothy Jones",
+          "amount": -10,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 25, 2022",
+          "description": "ALDI",
+          "amount": "41.03",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 25, 2022",
+          "description": "Woolworths",
+          "amount": "89.42",
+          "currency": "$",
+          "account_name": "Joseph Koss"
         }
       ]
     },
     {
-      "name": "Max Shields",
-      "balance": "5,242.78",
+      "name": "Joseph Koss",
+      "balance": 5,
       "currency": "$",
       "nature": "Bendigo PiggySaver Account",
       "transactions": [
@@ -229,225 +439,693 @@
           "description": "Ticketek",
           "amount": "89.11",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 12, 2022",
           "description": "Withdrawal - ATM",
           "amount": "50.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 11, 2022",
           "description": "Bakers Delight",
           "amount": "97.62",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 10, 2022",
           "description": "Timothy Jones",
-          "amount": "10.00",
+          "amount": -10,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 8, 2022",
           "description": "ALDI",
           "amount": "14.75",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 7, 2022",
           "description": "Ticketek",
           "amount": "49.51",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 6, 2022",
           "description": "Withdrawal - Non BBL ATM",
           "amount": "100.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 5, 2022",
           "description": "7-Eleven",
           "amount": "13.27",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 5, 2022",
           "description": "Withdrawal - Non BBL ATM",
           "amount": "150.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 3, 2022",
           "description": "Withdrawal - ATM",
           "amount": "150.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 3, 2022",
           "description": "Timothy Jones",
-          "amount": "10.00",
+          "amount": -10,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 2, 2022",
           "description": "Telegraphic Transfer Fee",
-          "amount": "20.00",
+          "amount": -20,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 2, 2022",
           "description": "Scarlett Beier",
-          "amount": "87.22",
+          "amount": -87,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 2, 2022",
           "description": "Bakers Delight",
           "amount": "85.33",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 2, 2022",
           "description": "Withdrawal - Non BBL ATM",
           "amount": "200.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 1, 2022",
           "description": "7-Eleven",
           "amount": "59.76",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 1, 2022",
           "description": "Withdrawal - Non BBL ATM",
           "amount": "200.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 31, 2022",
           "description": "Woolworths",
           "amount": "40.58",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 31, 2022",
           "description": "7-Eleven",
           "amount": "8.22",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 27, 2022",
           "description": "Withdrawal - ATM",
           "amount": "150.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 27, 2022",
           "description": "Timothy Jones",
-          "amount": "10.00",
+          "amount": -10,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 26, 2022",
           "description": "Woolworths",
           "amount": "19.69",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 22, 2022",
           "description": "Withdrawal - Non BBL ATM",
           "amount": "200.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 21, 2022",
           "description": "Alex Beier",
-          "amount": "11.95",
+          "amount": -11,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 21, 2022",
           "description": "Withdrawal - Non BBL ATM",
           "amount": "100.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 20, 2022",
           "description": " (Telstra Mobile)",
-          "amount": "92.59",
+          "amount": -92,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 20, 2022",
           "description": "Timothy Jones",
-          "amount": "10.00",
+          "amount": -10,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 19, 2022",
           "description": " (FOXTEL)",
-          "amount": "69.95",
+          "amount": -69,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 18, 2022",
           "description": "Withdrawal - ATM",
           "amount": "200.00",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 17, 2022",
           "description": "ALDI",
           "amount": "30.74",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 17, 2022",
+          "description": " (Sydney Water)",
+          "amount": -82,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 15, 2022",
+          "description": " (Australian Taxation Office)",
+          "amount": -1,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 14, 2022",
+          "description": "Woolworths",
+          "amount": "81.39",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 13, 2022",
+          "description": "Timothy Jones",
+          "amount": -10,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 11, 2022",
+          "description": "McDonald's",
+          "amount": "49.49",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 10, 2022",
+          "description": "Bunnings Warehouse",
+          "amount": "87.31",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 10, 2022",
+          "description": "Caltex",
+          "amount": "35.61",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 9, 2022",
+          "description": " (EnergyAustralia)",
+          "amount": -265,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 8, 2022",
+          "description": "Withdrawal - Non BBL ATM",
+          "amount": "200.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 6, 2022",
+          "description": "Timothy Jones",
+          "amount": -10,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 5, 2022",
+          "description": "Telstra",
+          "amount": "83.16",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 5, 2022",
+          "description": "Telstra",
+          "amount": "49.14",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 3, 2022",
+          "description": "Withdrawal - Non BBL ATM",
+          "amount": "100.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 30, 2022",
+          "description": "Bunnings Warehouse",
+          "amount": "77.65",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 30, 2022",
+          "description": "Oporto",
+          "amount": "66.83",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 29, 2022",
+          "description": "Qantas",
+          "amount": "16.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 29, 2022",
+          "description": "Timothy Jones",
+          "amount": -10,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 28, 2022",
+          "description": "McDonald's",
+          "amount": "79.82",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 28, 2022",
+          "description": "Withdrawal - ATM",
+          "amount": "50.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 27, 2022",
+          "description": "Telstra",
+          "amount": "30.97",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 26, 2022",
+          "description": "Telstra",
+          "amount": "88.32",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 25, 2022",
+          "description": "Kmart",
+          "amount": "4.11",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 23, 2022",
+          "description": "Kmart",
+          "amount": "67.80",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 22, 2022",
+          "description": "ALDI",
+          "amount": "88.40",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 22, 2022",
+          "description": "JB Hi-Fi",
+          "amount": "26.05",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 22, 2022",
+          "description": "Withdrawal - ATM",
+          "amount": "200.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 22, 2022",
+          "description": "Timothy Jones",
+          "amount": -10,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 19, 2022",
+          "description": " (FOXTEL)",
+          "amount": -69,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 18, 2022",
+          "description": "Oporto",
+          "amount": "96.05",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 15, 2022",
+          "description": "ALDI",
+          "amount": "90.60",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 15, 2022",
+          "description": "Timothy Jones",
+          "amount": -10,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 13, 2022",
+          "description": "Qantas",
+          "amount": "23.15",
+          "currency": "$",
+          "account_name": "Joseph Koss"
         }
       ]
     },
     {
-      "name": "Max Shields",
-      "balance": "4,504.96",
+      "name": "Joseph Koss",
+      "balance": 4,
       "currency": "$",
       "nature": "Bendigo PiggySaver Account",
       "transactions": [
-
+        {
+          "date": "August 13, 2022",
+          "description": "McDonald's",
+          "amount": -129,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "August 13, 2022",
+          "description": "Telstra",
+          "amount": -70,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "August 12, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "25.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "August 10, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "230.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "August 10, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "400.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "August 6, 2022",
+          "description": "Woolworths",
+          "amount": -136,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "August 6, 2022",
+          "description": "Oporto",
+          "amount": -147,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "August 3, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "39.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 30, 2022",
+          "description": "Dick Smith",
+          "amount": -99,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 30, 2022",
+          "description": "Kmart",
+          "amount": -143,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 25, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "40.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 23, 2022",
+          "description": "Caltex",
+          "amount": -60,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 23, 2022",
+          "description": "Ticketek",
+          "amount": -108,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 16, 2022",
+          "description": "IKEA",
+          "amount": -143,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 16, 2022",
+          "description": "Woolworths",
+          "amount": -103,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 16, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "26.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 10, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "180.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 10, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "200.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 9, 2022",
+          "description": "Bunnings Warehouse",
+          "amount": -81,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 9, 2022",
+          "description": "JB Hi-Fi",
+          "amount": -126,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 7, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "22.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 3, 2022",
+          "description": "Telegraphic Transfer Fee",
+          "amount": -20,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 3, 2022",
+          "description": "Charlotte Klein",
+          "amount": -65,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 2, 2022",
+          "description": "7-Eleven",
+          "amount": -142,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "July 2, 2022",
+          "description": "Ticketek",
+          "amount": -74,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 28, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "26.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 25, 2022",
+          "description": "Bunnings Warehouse",
+          "amount": -64,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 25, 2022",
+          "description": "Bakers Delight",
+          "amount": -103,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 24, 2022",
+          "description": "Telegraphic Transfer Fee",
+          "amount": -20,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 24, 2022",
+          "description": "Scarlett Beier",
+          "amount": -62,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 23, 2022",
+          "description": "Emily Champlin",
+          "amount": -22,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 19, 2022",
+          "description": "Alex Beier",
+          "amount": -91,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 19, 2022",
+          "description": "Demo Everyday Account",
+          "amount": "30.00",
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 18, 2022",
+          "description": "7-Eleven",
+          "amount": -135,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        },
+        {
+          "date": "June 18, 2022",
+          "description": "Dick Smith",
+          "amount": -51,
+          "currency": "$",
+          "account_name": "Joseph Koss"
+        }
       ]
     },
     {
-      "name": "Max Shields",
-      "balance": "35,678.20",
+      "name": "Joseph Koss",
+      "balance": 35,
       "currency": "$",
       "nature": "Bendigo PiggySaver Account",
       "transactions": [
@@ -456,107 +1134,45 @@
           "description": "Repayment",
           "amount": "1,104.69",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "August 1, 2022",
           "description": "Interest",
-          "amount": "964.77",
+          "amount": -964,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 14, 2022",
           "description": "Repayment",
           "amount": "1,104.69",
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "July 1, 2022",
           "description": "Interest",
-          "amount": "964.77",
+          "amount": -964,
           "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         },
         {
           "date": "June 14, 2022",
           "description": "Repayment",
           "amount": "1,104.69",
           "currency": "$",
-          "account_name": "Max Shields"
-        },
-        {
-          "date": "June 1, 2022",
-          "description": "Interest",
-          "amount": "964.77",
-          "currency": "$",
-          "account_name": "Max Shields"
-        },
-        {
-          "date": "May 14, 2022",
-          "description": "Repayment",
-          "amount": "1,104.69",
-          "currency": "$",
-          "account_name": "Max Shields"
-        },
-        {
-          "date": "May 1, 2022",
-          "description": "Interest",
-          "amount": "964.77",
-          "currency": "$",
-          "account_name": "Max Shields"
-        },
-        {
-          "date": "April 14, 2022",
-          "description": "Repayment",
-          "amount": "1,104.69",
-          "currency": "$",
-          "account_name": "Max Shields"
-        },
-        {
-          "date": "April 1, 2022",
-          "description": "Interest",
-          "amount": "964.77",
-          "currency": "$",
-          "account_name": "Max Shields"
-        },
-        {
-          "date": "March 14, 2022",
-          "description": "Repayment",
-          "amount": "1,104.69",
-          "currency": "$",
-          "account_name": "Max Shields"
-        },
-        {
-          "date": "March 1, 2022",
-          "description": "Interest",
-          "amount": "964.77",
-          "currency": "$",
-          "account_name": "Max Shields"
-        },
-        {
-          "date": "August 14, 2021",
-          "description": "E-Banking Telegraphic Transfer",
-          "amount": "300,000.00",
-          "currency": "$",
-          "account_name": "Max Shields"
+          "account_name": "Joseph Koss"
         }
       ]
     },
     {
-      "name": "Max Shields",
-      "balance": "0.00",
+      "name": "Joseph Koss",
+      "balance": 0,
       "currency": "$",
       "nature": "Bendigo PiggySaver Account",
       "transactions": [
-        {
-          "date": "August 14, 2021",
-          "description": "E-Banking Telegraphic Transfer",
-          "amount": "0.00",
-          "currency": "$",
-          "account_name": "Max Shields"
-        }
+
       ]
     }
   ]

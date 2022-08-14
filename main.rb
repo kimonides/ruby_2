@@ -16,27 +16,35 @@ browser.driver.manage.window.maximize
 
 browser.button(:xpath => "//*[@id=\"login-form\"]/nav/button[1]").click
 
-browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2]/ol/li[1]/ol").lis.each do | link |
+browser.li(data_semantic: "account-group").ol.lis.each do | link |
     link.click
 
-    browser.a(:xpath => "/html/body/main/div/section/div[2]/div/div/div/div/div/div/nav/a[3]").click
+    browser.a(data_semantic: "segmented-control-item-details").click
     sleep(1)
 
-    page = Nokogiri::HTML(browser.html)
+    page = Nokogiri::HTML(browser.div(data_semantic: "account").html)
 
     # Account Name
     account_name = page.at_css("div[data-semantic='customer-name']").at_css("span[data-semantic='detail']").text
     # ------------
-    currencyBalancePair = page.css("span[data-semantic='header-available-balance-amount']").text
+    currencyBalancePair = page.at_css("span[data-semantic='header-available-balance-amount']").text
     # Account Currency
     account_currency = currencyBalancePair[0]
     # Account Balance
-    account_balance = currencyBalancePair[1..-1]
+    account_balance = currencyBalancePair[1..-1].to_i
     # Account Nature
-    account_nature =  page.css("div[data-semantic='product-name']").at_css("span[data-semantic='detail']").text
+    account_nature =  page.at_css("div[data-semantic='product-name']").at_css("span[data-semantic='detail']").text
 
-    browser.a(:xpath => "/html/body/main/div/section/div[2]/div/div/div/div/div/div/nav/a[1]").click
-    page = Nokogiri::HTML(browser.html)
+    browser.a(data_semantic: "segmented-control-item-activity").click
+
+    browser.scroll.to :bottom
+    sleep(1)
+    browser.scroll.to :bottom
+    sleep(1)
+    browser.scroll.to :bottom
+    sleep(0.5)
+
+    page = Nokogiri::HTML(browser.ol(class: 'grouped-list grouped-list--compact grouped-list--indent').html)
     
     # Account Transactions
     account_transactions = []
@@ -44,6 +52,11 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
     activity_groups = page.css("li[data-semantic='activity-group']")
 
     activity_groups.each do |activity_group|
+
+      if (Date.today - Date.parse(activity_group['data-semantic-group'])).to_i > 2*31
+        break
+      end
+
       activity_items = activity_group.css("li[data-semantic='activity-item']")
       
       activity_items.each do |activity_item|
@@ -52,9 +65,15 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
         # Transaction Description
         transaction_description = activity_item.at_css("h2[data-semantic='transaction-title']").children[0].text
         # ------------------
+        is_negative = activity_item.at_css("span[data-semantic='transaction-amount']").attribute("aria-label").value.include? "minus"
+        #----------------------------
         currencyAmountPair = activity_item.at_css("span[data-semantic='amount']").text
         # Transaction Amount
-        transaction_amount = currencyAmountPair[1..-1]
+        if is_negative
+          transaction_amount = -1 * currencyAmountPair[1..-1].to_i
+        else
+          transaction_amount = currencyAmountPair[1..-1].to_i
+        end
         # Transaction Currency
         transaction_currency = currencyAmountPair[0]
         # Transaction Account Name
