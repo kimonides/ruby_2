@@ -2,37 +2,8 @@ require 'watir'
 require 'nokogiri'
 require 'json'
 
-class Account
-    def initialize(name, currency, balance, nature, transactions)
-      @name = name
-      @currency = currency
-      @balance = balance
-      @nature = nature
-      @transactions = transactions
-    end
-
-
-    def to_json(options = {})
-      # {:name => @name, :balance => @balance, :currency => @currency, :nature => @nature, :transactions => @transactions}.to_json
-      JSON.pretty_generate({:name => @name, :balance => @balance, :currency => @currency, :nature => @nature, :transactions => @transactions}, options)
-    end
-end
-
-class Transaction
-    def initialize(date, description, amount, currency, account_name)
-      @date = date
-      @description = description
-      @amount = amount
-      @currency = currency
-      @account_name = account_name
-    end
-
-    def to_json(options = {})
-      # {:date => @date, :description => @description, :amount => @amount, :currency => @currency, :account_name => @account_name}.to_json
-      JSON.pretty_generate({:date => @date, :description => @description, :amount => @amount, :currency => @currency, :account_name => @account_name}, options)
-    end
-end
-
+require_relative 'account'
+require_relative 'transaction'
 
 account_array = []
 transaction_array = []
@@ -79,10 +50,10 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
         transaction_date = activity_group.at_css("h3").text
         # Transaction Description
         transaction_description = activity_item.at_css("h2[data-semantic='transaction-title']").children[0].text
-        # Transaction Amount
-        transaction_amount = currencyAmountPair[1..-1]
         # ------------------
         currencyAmountPair = activity_item.at_css("span[data-semantic='amount']").text
+        # Transaction Amount
+        transaction_amount = currencyAmountPair[1..-1]
         # Transaction Currency
         transaction_currency = currencyAmountPair[0]
         # Transaction Account Name
