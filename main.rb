@@ -38,6 +38,7 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
     browser.a(:xpath => "/html/body/main/div/section/div[2]/div/div/div/div/div/div/nav/a[1]").click
     page = Nokogiri::HTML(browser.html)
     
+    # Account Transactions
     account_transactions = []
     
     activity_groups = page.css("li[data-semantic='activity-group']")
