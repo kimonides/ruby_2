@@ -98,6 +98,7 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
 end
 
 puts JSON.pretty_generate(account_array)
+puts JSON.pretty_generate(transaction_array)
 # JSON.pretty_generate(transaction_array)
 
 
