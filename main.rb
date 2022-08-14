@@ -53,8 +53,6 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
 
     page = Nokogiri::HTML(browser.html)
 
-    x,y = [1,2]
-
     # Account Name
     account_name = page.css("div[data-semantic='customer-name']").children()[1].text
     # ------------
