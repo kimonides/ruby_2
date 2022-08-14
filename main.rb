@@ -31,7 +31,7 @@ browser.li(data_semantic: "account-group").ol.lis.each do | link |
     # Account Currency
     account_currency = currencyBalancePair[0]
     # Account Balance
-    account_balance = currencyBalancePair[1..-1].to_i
+    account_balance = currencyBalancePair[1..-1].tr(',','').to_f
     # Account Nature
     account_nature =  page.at_css("div[data-semantic='product-name']").at_css("span[data-semantic='detail']").text
 
@@ -70,9 +70,9 @@ browser.li(data_semantic: "account-group").ol.lis.each do | link |
         currencyAmountPair = activity_item.at_css("span[data-semantic='amount']").text
         # Transaction Amount
         if is_negative
-          transaction_amount = -1 * currencyAmountPair[1..-1].to_i
+          transaction_amount = -1 * currencyAmountPair[1..-1].tr(',','').to_f
         else
-          transaction_amount = currencyAmountPair[1..-1].to_i
+          transaction_amount = currencyAmountPair[1..-1].tr(',','').to_f
         end
         # Transaction Currency
         transaction_currency = currencyAmountPair[0]
