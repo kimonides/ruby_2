@@ -14,7 +14,7 @@ class Account
 
     def to_json(options = {})
       # {:name => @name, :balance => @balance, :currency => @currency, :nature => @nature, :transactions => @transactions}.to_json
-      JSON.pretty_generate({:name => @name, :balance => @balance, :currency => @currency, :nature => @nature, :transactions => @transactions})
+      JSON.pretty_generate({:name => @name, :balance => @balance, :currency => @currency, :nature => @nature, :transactions => @transactions}, options)
     end
 end
 
@@ -29,7 +29,7 @@ class Transaction
 
     def to_json(options = {})
       # {:date => @date, :description => @description, :amount => @amount, :currency => @currency, :account_name => @account_name}.to_json
-      JSON.pretty_generate({:date => @date, :description => @description, :amount => @amount, :currency => @currency, :account_name => @account_name})
+      JSON.pretty_generate({:date => @date, :description => @description, :amount => @amount, :currency => @currency, :account_name => @account_name}, options)
     end
 end
 
@@ -54,7 +54,7 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
     page = Nokogiri::HTML(browser.html)
 
     # Account Name
-    account_name = page.css("div[data-semantic='customer-name']").children()[1].text
+    account_name = page.at_css("div[data-semantic='customer-name']").at_css("span[data-semantic='detail']").text
     # ------------
     currencyBalancePair = page.css("span[data-semantic='header-available-balance-amount']").text
     # Account Currency
@@ -62,7 +62,7 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
     # Account Balance
     account_balance = currencyBalancePair[1..-1]
     # Account Nature
-    account_nature =  page.css("div[data-semantic='product-name']").children()[1].text
+    account_nature =  page.css("div[data-semantic='product-name']").at_css("span[data-semantic='detail']").text
 
     browser.a(:xpath => "/html/body/main/div/section/div[2]/div/div/div/div/div/div/nav/a[1]").click
     page = Nokogiri::HTML(browser.html)
@@ -75,24 +75,28 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
       activity_items = activity_group.css("li[data-semantic='activity-item']")
       
       activity_items.each do |activity_item|
-        transaction_description = activity_item.at_css("h2[data-semantic='transaction-title']").children[0].text
+        # Transaction Date
         transaction_date = activity_group.at_css("h3").text
-        currencyAmountPair = activity_item.at_css("span[data-semantic='amount']").text
-        transaction_currency = currencyAmountPair[0]
+        # Transaction Description
+        transaction_description = activity_item.at_css("h2[data-semantic='transaction-title']").children[0].text
+        # Transaction Amount
         transaction_amount = currencyAmountPair[1..-1]
+        # ------------------
+        currencyAmountPair = activity_item.at_css("span[data-semantic='amount']").text
+        # Transaction Currency
+        transaction_currency = currencyAmountPair[0]
+        # Transaction Account Name
         transaction_account_name = account_name
         
         transaction = Transaction.new(transaction_date, transaction_description, transaction_amount, transaction_currency, transaction_account_name)
+        
         account_transactions.push(transaction)
         transaction_array.push(transaction)
       end
     end
 
     account = Account.new(account_name, account_currency, account_balance, account_nature, account_transactions)
-
     account_array.push(account)
-
-    # puts JSON.pretty_generate(account)
 end
 
 File.open("output/accounts.json","w") do |f|
@@ -102,14 +106,3 @@ end
 File.open("output/transactions.json","w") do |f|
   f.write(JSON.pretty_generate({:transactions => transaction_array}))
 end
-
-
-# puts JSON.pretty_generate(account_array)
-# puts JSON.pretty_generate(transaction_array)
-# JSON.pretty_generate(transaction_array)
-
-
-
-
-
-
