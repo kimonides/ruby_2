@@ -95,8 +95,17 @@ browser.ol(:xpath => "/html/body/main/div/section/div[1]/div[1]/div/div[1]/div[2
     # puts JSON.pretty_generate(account)
 end
 
-puts JSON.pretty_generate(account_array)
-puts JSON.pretty_generate(transaction_array)
+File.open("output/accounts.json","w") do |f|
+  f.write(JSON.pretty_generate({:accounts => account_array}))
+end
+
+File.open("output/transactions.json","w") do |f|
+  f.write(JSON.pretty_generate({:transactions => transaction_array}))
+end
+
+
+# puts JSON.pretty_generate(account_array)
+# puts JSON.pretty_generate(transaction_array)
 # JSON.pretty_generate(transaction_array)
 
 
