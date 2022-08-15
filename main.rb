@@ -112,9 +112,8 @@ get '/callback' do
   # Remove Last Track
   removeLastTrack(access_token, playlist_id)
 
-
-  #------------------------------------------------------------
-
+  
+  # Create Playlist Object
   playlist = initializePlaylistFromApi(access_token, playlist_id)
 
   File.open("output/playlist.json","w") do |f|
