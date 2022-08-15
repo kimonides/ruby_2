@@ -1,0 +1,23 @@
+{
+  "id": "0ssBDBQs4dVxkTxTrCuQCE",
+  "description": "",
+  "name": "my_playlist",
+  "owner_name": "Testing",
+  "spotify_url": "https://open.spotify.com/playlist/0ssBDBQs4dVxkTxTrCuQCE",
+  "tracks": [
+    {
+      "id": "5n8Aro6j1bEGIy7Tpo7FV7",
+      "artist_name": "N.W.A.",
+      "name": "Fuck Tha Police",
+      "album_name": "Straight Outta Compton",
+      "spotify_url": "https://open.spotify.com/album/0Y7qkJVZ06tS2GUCDptzyW"
+    },
+    {
+      "id": "6bhBAfmiMdvfFFtY0Rp8dA",
+      "artist_name": "Dreamville",
+      "name": "Grow",
+      "album_name": "Revenge Of The Dreamers II",
+      "spotify_url": "https://open.spotify.com/album/0h7Rqxud5GknQMMoLHNx80"
+    }
+  ]
+}
