@@ -1,99 +1,66 @@
 require 'watir'
-require 'nokogiri'
+require 'rest-client'
 require 'json'
+require 'sinatra'
 
-require_relative 'account'
-require_relative 'transaction'
 
-account_array = []
-transaction_array = []
+set :port, 8888
 
-browser = Watir::Browser.new
+client_id = "6f120de7b20e4f67b84d422b50ac5836"
+client_secret = "3da3626c3862485f8d33905b72ff8e28"
+redirect_uri = "http://localhost:8888/callback"
 
-browser.goto("https://demo.bendigobank.com.au/banking/sign_in")
+get '/callback' do
+  body = {
+    grant_type: "authorization_code",
+    code: params[:code],
+    redirect_uri: redirect_uri,
+    client_id: client_id,
+    client_secret: client_secret,
+  }
 
-browser.driver.manage.window.maximize
+  auth_response = RestClient.post('https://accounts.spotify.com/api/token', body) {|response, request, result| response }
 
-browser.button(:xpath => "//*[@id=\"login-form\"]/nav/button[1]").click
+  auth_params = JSON.parse(auth_response.body)
 
-browser.li(data_semantic: "account-group").ol.lis.each do | link |
-    link.click
+  # ACCESS TOKEN
+  access_token = auth_params["access_token"]
 
-    browser.a(data_semantic: "segmented-control-item-details").click
-    sleep(1)
+  response = RestClient.get('https://api.spotify.com/v1/me', Authorization: "Bearer #{auth_params["access_token"]}")
 
-    page = Nokogiri::HTML(browser.div(data_semantic: "account").html)
+  # USER ID
+  user_id = JSON.parse(response.body)["id"]
 
-    # Account Name
-    account_name = page.at_css("div[data-semantic='customer-name']").at_css("span[data-semantic='detail']").text
-    # ------------
-    currencyBalancePair = page.at_css("span[data-semantic='header-available-balance-amount']").text
-    # Account Currency
-    account_currency = currencyBalancePair[0]
-    # Account Balance
-    account_balance = currencyBalancePair[1..-1].tr(',','').to_f
-    # Account Nature
-    account_nature =  page.at_css("div[data-semantic='product-name']").at_css("span[data-semantic='detail']").text
+  puts user_id
 
-    browser.a(data_semantic: "segmented-control-item-activity").click
+  # params = {name: "my_playlist"}
 
-    browser.scroll.to :bottom
-    sleep(1)
-    browser.scroll.to :bottom
-    sleep(1)
-    browser.scroll.to :bottom
-    sleep(0.5)
+  RestClient.log = 'stdout'
+  response = RestClient.post('https://api.spotify.com/v1/users/%s/playlists' % [user_id], {name: "my_playlist"}.to_json, content_type: :json, accept: :json, Authorization: "Bearer #{auth_params["access_token"]}") {|response, request, result| response }
 
-    page = Nokogiri::HTML(browser.ol(class: 'grouped-list grouped-list--compact grouped-list--indent').html)
-    
-    # Account Transactions
-    account_transactions = []
-    
-    activity_groups = page.css("li[data-semantic='activity-group']")
+  puts response
 
-    activity_groups.each do |activity_group|
-
-      if (Date.today - Date.parse(activity_group['data-semantic-group'])).to_i > 2*31
-        break
-      end
-
-      activity_items = activity_group.css("li[data-semantic='activity-item']")
-      
-      activity_items.each do |activity_item|
-        # Transaction Date
-        transaction_date = activity_group.at_css("h3").text
-        # Transaction Description
-        transaction_description = activity_item.at_css("h2[data-semantic='transaction-title']").children[0].text
-        # ------------------
-        is_negative = activity_item.at_css("span[data-semantic='transaction-amount']").attribute("aria-label").value.include? "minus"
-        #----------------------------
-        currencyAmountPair = activity_item.at_css("span[data-semantic='amount']").text
-        # Transaction Amount
-        if is_negative
-          transaction_amount = -1 * currencyAmountPair[1..-1].tr(',','').to_f
-        else
-          transaction_amount = currencyAmountPair[1..-1].tr(',','').to_f
-        end
-        # Transaction Currency
-        transaction_currency = currencyAmountPair[0]
-        # Transaction Account Name
-        transaction_account_name = account_name
-        
-        transaction = Transaction.new(transaction_date, transaction_description, transaction_amount, transaction_currency, transaction_account_name)
-        
-        account_transactions.push(transaction)
-        transaction_array.push(transaction)
-      end
-    end
-
-    account = Account.new(account_name, account_currency, account_balance, account_nature, account_transactions)
-    account_array.push(account)
+  'Hello world!'
 end
 
-File.open("output/accounts.json","w") do |f|
-  f.write(JSON.pretty_generate({:accounts => account_array}))
-end
 
-File.open("output/transactions.json","w") do |f|
-  f.write(JSON.pretty_generate({:transactions => transaction_array}))
-end
+Thread.new { 
+  sleep(1) until Sinatra::Application.settings.running?
+
+  browser = Watir::Browser.new
+
+
+  # browser.goto("https://accounts.spotify.com/authorize?client_id="+ client_id + "&scope=code" +"&response_type=code&redirect_uri="+ ERB::Util.url_encode(redirect_uri))
+
+  browser.goto("https://accounts.spotify.com/authorize?client_id=%s&scope=%s&response_type=code&redirect_uri=%s" % [client_id, ERB::Util.url_encode("playlist-modify-public playlist-modify-private"),ERB::Util.url_encode(redirect_uri)])
+  browser.driver.manage.window.maximize
+
+  browser.input(id: "login-username").set "kimonide@gmail.com"
+  browser.input(id: "login-password").set "1223334444"
+  browser.button(id: "login-button").click
+  # sleep(100)
+  browser.button(data_testid: "auth-accept").click
+}
+
+
+
